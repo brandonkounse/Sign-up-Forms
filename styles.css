@@ -1,5 +1,4 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -9,8 +8,34 @@ html {
 }
 
 body {
-    width: auto;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
     min-height: 100vh;
+    width: auto;
+    font-family: "work-sans", sans-serif;
+    font-weight: 400;
+    background-color: #04161c;
+}
+
+label {
+    display: block;
+    color: gray;
+}
+
+input {
+    border: 1.5px solid #E5E7EB;
+    border-radius: 1px;
+    height: 20px;
+}
+
+input:focus {
+    outline-color: #126d88;
+    box-shadow: 0 6px 10px -4px rgb(200, 200, 200);
+}
+
+input:invalid {
+    outline-color: red;
 }
 
 a {
@@ -24,14 +49,18 @@ footer {
 #site-container {
     display: flex;
     flex: 1;
+    height: 100vh;
+    max-width: 1000px;
 }
 
+/* Left side of design */
+
 #left-side {
-    height: 100vh;
-    width: 33%;
+    width: 40%;
     background-image: url("./images/stars.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 #logo-container {
@@ -44,6 +73,8 @@ footer {
 #logo-container img {
     height: auto;
     width: 50%;
+    min-height: 200px;
+    min-width: 150px;
 }
 
 #footer-container {
@@ -52,4 +83,86 @@ footer {
     justify-content: end;
     height: 50%;
     color: white;
+}
+
+/* Right side of design */
+
+#right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    background-color: #f9fafb;
+}
+
+#header-container,
+#form-container,
+#submit-container {
+    height: 33.33%;
+}
+
+#header-container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    font-size: 1.5rem;
+}
+
+#header-container div > h1 {
+    margin-left: 1rem;
+} 
+
+#header-container div > p {
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Form Design */
+
+#form-container {
+    background-color: #ffffff;
+    box-shadow: 0 6px 10px -4px rgb(200, 200, 200);
+    font-size: 0.8rem;
+}
+
+#form-container > * {
+    margin: 1rem 2rem;
+}
+
+#form {
+    height: 100%;
+}
+
+.form-flex {
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 2rem;
+}
+
+/* Design for Submit Button Section */
+
+.submit-wrapper {
+    margin: 1rem 1rem
+}
+
+button {
+    background-color: #126d88;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    cursor:pointer;
+}
+
+.submit-wrapper a {
+    color: #126d88;
+    text-decoration: none;
+}
+
+.submit-wrapper p {
+    margin-top: 1rem;
 }
