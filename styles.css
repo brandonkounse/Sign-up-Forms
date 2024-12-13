@@ -13,7 +13,7 @@ body {
     box-sizing: border-box;
     min-height: 100vh;
     width: auto;
-    font-family: "work-sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     background-color: #04161c;
 }
@@ -21,17 +21,23 @@ body {
 label {
     display: block;
     color: gray;
+    padding-left: 2px;
 }
 
 input {
-    border: 1.5px solid #E5E7EB;
-    border-radius: 1px;
-    height: 20px;
+    border: 2px solid #E5E7EB;
+    border-radius: 4px;
+    height: 30px;
+    padding-left: 5px;
 }
 
 input:focus {
     outline-color: #126d88;
     box-shadow: 0 6px 10px -4px rgb(200, 200, 200);
+}
+
+input:not(:focus) {
+    color: gray;
 }
 
 input:invalid {
@@ -96,9 +102,8 @@ footer {
 }
 
 #header-container,
-#form-container,
 #submit-container {
-    height: 33.33%;
+    height: 40%;
 }
 
 #header-container div {
@@ -132,6 +137,8 @@ footer {
 
 #form {
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-flex {
@@ -143,15 +150,18 @@ footer {
 /* Design for Submit Button Section */
 
 .submit-wrapper {
-    margin: 1rem 1rem
+    margin: 2rem 1.5rem
 }
 
 button {
     background-color: #126d88;
+    font-size: 16px;
+    font-weight: bold;
     color: white;
     padding: 0.5rem 1.5rem;
+    border: none;
     border-radius: 5px;
-    font-size: 16px;
+    box-shadow: 0 6px 10px -4px rgb(200, 200, 200);
 }
 
 button:hover {
